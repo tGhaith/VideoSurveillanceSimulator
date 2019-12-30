@@ -236,6 +236,57 @@ namespace Project
                     clique++;
                 }
                 g.FillEllipse(Brushes.Red, X, Y, 10 / qX, 10 / qY);
+                for (int x=(int)Math.Ceiling(X); x < image.Width; x++)
+                {
+                    int check = (int)Math.Ceiling(Y);
+                    bool obstacle = false;
+                    int cnst = x;
+                    for (int y = (int)Math.Ceiling(Y); y < image.Height; y++)
+                    {
+                        check = y;
+                        Color clr = image.GetPixel(cnst++, y);
+                        Color newClr = Color.FromArgb(255, 255, 255, 0);
+                        if (clr.R > 240 && clr.B > 240 && clr.G > 240)
+                        {
+                            image.SetPixel(cnst, y, newClr);
+                        }
+                        else
+                        {
+                            
+                            break;
+
+                        }
+                    }
+                    for (int y = (int)Math.Ceiling(Y); y > 0; y--)
+                    {
+                        check = y;
+                        Color clr = image.GetPixel(cnst++, y);
+                        Color newClr = Color.FromArgb(255, 255, 255, 0);
+                        if (clr.R > 240 && clr.B > 240 && clr.G > 240)
+                        {
+                            image.SetPixel(cnst, y, newClr);
+                        }
+                        else
+                        {
+
+                            break;
+
+                        }
+                    }
+                        for (int y = (int)Math.Ceiling(Y); y < check+1; y++)
+                    {
+                        Color clr = image.GetPixel(x, y);
+                        if ((clr.R < 10 && clr.B <10 && clr.G < 10))
+                        {
+                            obstacle = true;
+                        }
+                    }
+
+                    if (obstacle)
+                    {
+                        break;
+                    }
+                }
                 try
                 {
                     image.Save(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\VideoSurveillanceSimulator\" + name + "temporary.jpg");
