@@ -92,7 +92,7 @@ namespace Project
         
 
 
-        private void btnTest_Click(object sender, EventArgs e)
+       /* private void btnTest_Click(object sender, EventArgs e)
         {
             
             setLayer(picPlan);
@@ -121,7 +121,7 @@ namespace Project
             getLayer().Controls.Add(layer1);
             setLayer(layer1);
 
-        }
+        }*/
         private Control layer;
         
         void setLayer(PictureBox pb)

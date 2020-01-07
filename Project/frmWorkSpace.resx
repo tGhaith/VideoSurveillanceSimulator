@@ -626,6 +626,9 @@
   <data name="btnTest.Text" xml:space="preserve">
     <value>Test</value>
   </data>
+  <data name="btnTest.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;btnTest.Name" xml:space="preserve">
     <value>btnTest</value>
   </data>

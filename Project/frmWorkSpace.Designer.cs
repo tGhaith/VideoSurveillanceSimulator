@@ -186,7 +186,6 @@
             resources.ApplyResources(this.btnTest, "btnTest");
             this.btnTest.Name = "btnTest";
             this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // groupBox1
             // 
