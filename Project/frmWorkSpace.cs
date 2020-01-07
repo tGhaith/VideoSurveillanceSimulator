@@ -351,14 +351,17 @@ namespace Project
             {
                 qX = ((float)picPlan.Width / (float)(picPlan.Image.Width));
                 qY = ((float)picPlan.Height / (float)picPlan.Image.Height);
-                X = e.X / qX;
-                Y = (e.Y) / qY;
+                X = this.correctionCoordonees(e.X , qX);
+                Y = this.correctionCoordonees(e.Y , qY);
             }
-            catch
-            {
-                
-            }
+            catch { }
 
+        }
+        private float correctionCoordonees(int r,float q)
+        {
+            float res = 0;
+            res = r / q;
+            return res;
         }
     }
 }
