@@ -110,6 +110,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="beans\Camera.cs" />
+    <Compile Include="beans\Plan.cs" />
+    <Compile Include="beans\Projet.cs" />
+    <Compile Include="beans\Rapport.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

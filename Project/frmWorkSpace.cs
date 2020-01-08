@@ -349,10 +349,10 @@ namespace Project
         {
             try
             {
-                qX = ((float)picPlan.Width / (float)(picPlan.Image.Width));
-                qY = ((float)picPlan.Height / (float)picPlan.Image.Height);
-                X = this.correctionCoordonees(e.X , qX);
-                Y = this.correctionCoordonees(e.Y , qY);
+                 qX = ((float)picPlan.Width / (float)(picPlan.Image.Width));
+                 qY = ((float)picPlan.Height / (float)picPlan.Image.Height);
+                 X = this.correctionCoordonees(e.X , qX);
+                 Y = this.correctionCoordonees(e.Y , qY);
             }
             catch { }
 
